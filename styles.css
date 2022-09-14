@@ -193,3 +193,21 @@ button {
     flex-direction: column;
   }
 }
+
+@media only screen and (min-width: 800px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    grid-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    grid-gap: 30px;
+  }
+}
