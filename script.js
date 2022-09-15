@@ -46,6 +46,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount++;
   }
 
   // check if given question text is equal to user typed text
@@ -60,6 +61,7 @@ const validate = (key) => {
   }
   return false;
 };
+
 
 // FINISHED TYPING
 const gameOver = () => {
@@ -124,6 +126,12 @@ const start = () => {
   }, 1000);
 };
 
+window.addEventListener("keydown", function (k) {
+  if (k.keyCode == 32 && k.target == document.body) {
+    k.preventDefault();
+  }
+});
+
 // START Countdown
 startBtn.addEventListener("click", start);
 
@@ -138,3 +146,5 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
 }, 1000);
+
+
