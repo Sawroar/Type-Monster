@@ -125,7 +125,7 @@ const start = () => {
     count--;
   }, 1000);
 };
-
+// SpaceBar Auto Scrooling Issue 
 window.addEventListener("keydown", function (k) {
   if (k.keyCode == 32 && k.target == document.body) {
     k.preventDefault();

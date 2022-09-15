@@ -183,6 +183,15 @@ button {
   top: 0;
 }
 
+.btn-blog {
+  margin-left: 10%;
+}
+
+.btn-blog a {
+  text-decoration: none;
+  color: white;
+}
+
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
